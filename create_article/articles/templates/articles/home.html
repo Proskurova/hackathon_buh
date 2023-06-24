@@ -1,0 +1,18 @@
+{% extends "articles/base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+    {% if request.user.is_authenticated %}
+    <form action="{% url 'process' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" name="sf_url" value="" autofocus="" size="30" placeholder="Вставьте сюда ссылку на видео">
+            <button type="submit" class="btn btn-primary">Загрузить</button>
+        </div>
+    </form>
+    {% else %}
+    <h3>Для работы на сайте, нужно зарегестрироваться или войти.</h3>
+    {% endif %}
+</div>
+{% endblock %}
+

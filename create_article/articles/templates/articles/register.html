@@ -1,0 +1,16 @@
+{% extends "articles/base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+    <h1>{{title}}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for f in form %}
+        <p><label class="form-group" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+        <div class="form-group">{{ f.errors }}</div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Регистрация</button>
+    </form>
+</div>
+
+{% endblock %}

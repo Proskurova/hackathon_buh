@@ -1,0 +1,29 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="Lyuda_2022.hello_world.models.Project.objects" />
+          <option value="Lyuda_2022.blog.models.Post.objects" />
+          <option value="Lyudmila_P.portfolio.models.Project.objects" />
+          <option value="Lyudmila_P.portfolio.models.Portfolio.objects" />
+          <option value="Lyudmila_P.Lyudmila_P.models.About.objects" />
+          <option value="hello_world.models.Project.objects" />
+          <option value="blog.models.Post.objects" />
+          <option value="blog.models.Comment.objects" />
+          <option value="help.models.Question.objects" />
+          <option value="help.models.Answer.objects" />
+          <option value="Lyuda_2022.help.models.Question.objects" />
+          <option value="my_website.home_page.models.Homepage.objects" />
+          <option value="my_website.services.models.Services.objects" />
+          <option value="my_website.account.models.Account.objects" />
+          <option value="todolist.models.TodoList.objects" />
+          <option value="todolist.models.Category.objects" />
+          <option value="women.models.Women.objects" />
+          <option value="women.models.Category.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
