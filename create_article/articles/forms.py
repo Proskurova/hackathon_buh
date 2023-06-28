@@ -23,7 +23,15 @@ class LoginUserForm(AuthenticationForm):
     password = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'form-input'}))
 
 
-class DownloadLink(forms.Form):
-    link = forms.SlugField(label='Ссылка', max_length=300)
+class DownloadLinkForm(forms.ModelForm):
+    link = forms.URLField(widget=forms.URLInput(attrs={'class': 'form-input', 'size': "25", 'name': 'link'}))
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    class Meta:
+        model = DownloadLink
+        fields = ['link']
+
 
 

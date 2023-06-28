@@ -6,10 +6,10 @@
     <form action="{% url 'home' %}" method="post">
           {% csrf_token %}
           <div class="form-group">
-              <p>Длительность видео: 6,37 минут </p>
-
+              <p>Статья: {{ title_article }}</p>
+              <p>Длительность видео: {{ time_video }} минут </p>
           </div>
-          <div class="form-group">
+          <div class="form-input">
               <p>Введите времменной промежуток обработки видео:</p>
               <input type="datetime" name="time" value="" autofocus="" size="8" placeholder="00:00 (Начало)">
               <input type="datetime" name="time" value="" autofocus="" size="8" placeholder="00:00 (Конец)">

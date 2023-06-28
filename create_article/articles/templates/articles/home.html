@@ -1,14 +1,16 @@
 {% extends "articles/base.html" %}
 {% load static %}
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
+<div class="col-md-8 offset-md-2" xmlns="http://www.w3.org/1999/html">
     {% if request.user.is_authenticated %}
     <form action="{% url 'process' %}" method="post">
         {% csrf_token %}
-        <div class="form-group">
-            <input type="text" name="sf_url" value="" autofocus="" size="30" placeholder="Вставьте сюда ссылку на видео">
-            <button type="submit" class="btn btn-primary">Загрузить</button>
-        </div>
+        <div class="form-error">{{ form.non_field_errors }}</div>
+        {% for f in form %}
+        <p><label class="form-group" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+        <div class="form-group">{{ f.errors }}</div>
+        <button type="submit" name="q" class="btn btn-primary">Загрузить</button>
+         {% endfor %}
     </form>
     {% else %}
     <h3>Для работы на сайте, нужно зарегестрироваться или войти.</h3>
